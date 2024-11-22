@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4 {
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #007BFF;
+  color: #fff;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+header {
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #007BFF;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #333;
+  z-index: 1000; 
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links li a:hover {
+  color: #007BFF;
+
+}
+
+/* Contact Hero Section */
+.hero {
+  background: url('../images/about.jpg') center center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+/* Contact Section */
+.contact {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.contact-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  flex-basis: 30%;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.contact-item i {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #007BFF;
+}
+
+.contact-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-item p a {
+  color: #007BFF;
+  text-decoration: underline;
+}
+
+.contact-item p a:hover {
+  color: #0056b3;
+}
+
+
+
+/* Why Choose Us Section */
+.why-choose-us {
+  background: #f9f9f9;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.why-choose-us h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.reasons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.reason {
+  flex-basis: 30%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.reason i {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #007BFF;
+}
+
+.reason h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* FAQ Section */
+.faq {
+  padding: 60px 0;
+}
+
+.faq h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.question h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
+}
+
+.question i {
+  font-size: 1rem;
+  color: #007BFF;
+  transition: transform 0.3s;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.answer p {
+  font-size: 1rem;
+  color: #555;
+  margin: 10px 0 0;
+}
+
+.faq-item.active .answer {
+  max-height: 200px; /* Adjust based on content */
+}
+
+.faq-item.active .question i {
+  transform: rotate(180deg);
+}
+
+
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* Responsive Adjustments for Small Screens */
+@media (max-width: 991px) {
+/* Header */
+
+header .logo a {
+font-size: 1.2rem;
+margin-bottom: 10px;
+}
+
+header .nav-links {
+flex-direction: column;
+align-items: flex-start;
+width: 100%;
+display: none; /* Hide menu by default */
+}
+
+header .nav-links li {
+margin-left: 0;
+width: 100%;
+}
+
+header .nav-links li a {
+padding: 10px 15px;
+width: 100%;
+display: block;
+}
+
+.hamburger {
+display: block;
+}
+
+.nav-links {
+display: none;
+flex-direction: column;
+position: absolute;
+top: 70px;
+right: 0;
+background-color: #fff;
+width: 100%;
+padding: 10px 0;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+z-index: 999;
+}
+
+
+/* Show menu when toggled */
+.nav-links.show {
+display: flex;
+}
+
+.nav-links li {
+text-align: center;
+margin: 10px 0;
+}
+
+/* Hero Section */
+.hero {
+height: auto;
+padding: 80px 0 60px;
+}
+
+.hero-content {
+padding: 0 20px;
+}
+
+.hero-content h1 {
+font-size: 2rem;
+}
+
+.hero-content p {
+font-size: 1rem;
+}
+
+/* Buttons */
+.btn {
+padding: 10px 20px;
+font-size: 1rem;
+}
+
+/* Contact Section */
+.contact h2 {
+font-size: 2rem;
+}
+
+.contact-grid {
+flex-direction: column;
+align-items: center;
+}
+
+.contact-item {
+flex-basis: 100%;
+margin-bottom: 20px;
+}
+
+.contact-item i {
+font-size: 2rem;
+}
+
+.contact-item h3 {
+font-size: 1.2rem;
+}
+
+/* Why Choose Us Section */
+.why-choose-us h2 {
+font-size: 2rem;
+}
+
+.reasons {
+flex-direction: column;
+align-items: center;
+}
+
+.reason {
+flex-basis: 100%;
+margin-bottom: 20px;
+}
+
+.reason i {
+font-size: 2rem;
+}
+
+.reason h3 {
+font-size: 1.2rem;
+}
+
+/* FAQ Section */
+.faq h2 {
+font-size: 2rem;
+}
+
+.faq-item {
+padding: 10px 0;
+}
+
+.question h3 {
+font-size: 1rem;
+}
+
+.answer p {
+font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+padding: 15px 0;
+}
+
+footer p {
+font-size: 0.9rem;
+}
+}
